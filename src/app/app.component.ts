@@ -30,9 +30,7 @@ export class AppComponent implements OnInit {
     const buttonClickObservable = this.getButtonClickObservable();
 
     merge(buttonClickObservable, this.inputText, quoteObservable)
-      .subscribe(data =>
-        StringHandler.handle(data);
-      )
+      .subscribe(data => this.data = data);
   }
 
   private getButtonClickObservable() {
@@ -55,13 +53,6 @@ export class AppComponent implements OnInit {
   }
 
   private getQuoteObservable() {
-
-    this.wiseQuote.subscribe((click) => {
-      this.httpClient.get<WiseQuoteModel>('https://favqs.com/api/qotd').subscribe(
-        data => {}
-      )
-    });
-
     return this.wiseQuote.pipe(
       mergeMap(_ =>
         this.httpClient.get<WiseQuoteModel>('https://favqs.com/api/qotd')
