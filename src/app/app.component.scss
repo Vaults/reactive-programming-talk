@@ -1,0 +1,51 @@
+.content {
+  text-align: center;
+  font-family: "Courier New", monospace;
+}
+
+.data {
+  font-size: large;
+  padding: 15px;
+  border: 1px solid #666666;
+  background-color: #111111;
+  width: 75%;
+  min-height: 100px;
+  margin: auto;
+  text-align: left;
+}
+
+button {
+  margin-top: 10px;
+  background-color: goldenrod;
+  color: white;
+  border: black;
+  padding: 5px 15px;
+  border-radius: 3px;
+  border-inset: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.input {
+  input {
+    text-align: center;
+    color: palegoldenrod;
+    background-color: #111111;
+    margin-top: 10px;
+    border-inset: none;
+    border: 1px solid #666666;
+  }
+  input::placeholder {
+    color: #666666;
+  }
+  textarea:focus, input:focus{
+    outline: none;
+  }
+}
+
